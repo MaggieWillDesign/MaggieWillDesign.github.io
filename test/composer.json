@@ -1,6 +1,0 @@
-{
-    "name": "fleekwood/test",
-    "require": {
-        "phpmailer/phpmailer": "^6.8"
-    }
-}
