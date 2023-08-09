@@ -1,8 +1,8 @@
 <?php
-require 'path_to_phpmailer/PHPMailerAutoload.php'; // Adjust the path to PHPMailer
+require 'PHPMailerAutoload.php'; // Adjust the path to PHPMailer
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $recipient = "your@email.com"; // Replace with your email address
+    $recipient = "mjwalkerprojects@gmail.com"; // Replace with your email address
 
     $name = $_POST["name"];
     $email = $_POST["email"];
@@ -11,10 +11,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $mail = new PHPMailer;
     
     $mail->isSMTP();
-    $mail->Host = 'smtp.example.com'; // Replace with your SMTP server
+    $mail->Host = 'smtp.gmail.com'; // Replace with your SMTP server
     $mail->SMTPAuth = true;
-    $mail->Username = 'your_username'; // Replace with your SMTP username
-    $mail->Password = 'your_password'; // Replace with your SMTP password
+    $mail->Username = 'mjwalkerprojects@gmail.com'; // Replace with your SMTP username
+    $mail->Password = 'qz2tJFI7'; // Replace with your SMTP password
     $mail->SMTPSecure = 'tls'; // Use 'ssl' if needed
     $mail->Port = 587; // SMTP port
 
