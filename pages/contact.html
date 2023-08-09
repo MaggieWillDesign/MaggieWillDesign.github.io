@@ -67,9 +67,13 @@
             </div>
           </div>
           <div class="row">
-            <div class="col-md-6">
+            <div class="col-md-3 content">
+              <p>We love to get in touch with new people. Whether you are a potential customer, partner or someone else, we love to hear from you!</p>
+            </div>
+            <div class="col-md-6 col-md-offset-3">
               <!-- The contact form-->
-              <form id="form" action="/php/mail.php" class="form row mt-md">
+              <form id="form" action="https://formspree.io/f/xrgwpewl" method="POST" class="form row">
+                
                 <div class="col-md-6">
                   <div class="tag">What's your name? *</div>
                   <input required type="text" name="name" class="form-control">
@@ -90,19 +94,28 @@
                   <div class="tag">Tell us what's up! *</div>
                   <textarea required name="message" class="form-control"></textarea>
                   <button id="send" type="submit" class="btn btn-default">Send message</button><span class="p-md">* These fields are required</span>
+                  <input type="hidden" name="_next" value="https://www.google.com/">
                 </div>
               </form>
-            </div>
-            <div class="col-md-5 col-md-offset-1 content">
-              <div class="mt-lg"><img src="../images/contact/01.jpg" class="mt-sm mb-md">
-                <p>We always love to get in touch with new people. Whether you are a potential customer, partner or someone else, we love to hear from you!</p>
-              </div>
             </div>
           </div>
         </div>
       </section>
       <!-- The type animation script-->
-      <script>$(function(){$(".typed").typed({strings: ["Hello", "Hola", "こんにちは", "Ciao", "Aloha", "Hallo"],typeSpeed: 130,loop: true  });});</script>
+      <script>$(function () { $(".typed").typed({ strings: ["Hello", "Hola", "こんにちは", "Ciao", "Hallo", "Bonjour"], typeSpeed: 130, loop: true }); });</script>
+     
+     <script>
+      document.getElementById('form').addEventListener('submit', function (event) {
+        // event.preventDefault(); // Prevent the default form submission
+        // Add any form validation or processing here
+        this.submit(); // Submit the form
+        setTimeout(function(){
+        window.location.href = 'thankyou.html'; // Redirect to thank-you page
+      },3000);
+    });  
+    </script>
+
+
       <footer>
         <div class="container">
           <div class="row">
