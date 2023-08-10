@@ -171,3 +171,22 @@
   });
 
 })(jQuery);
+
+
+// document.addEventListener("DOMContentLoaded", function () {
+//   const passwordInput = document.getElementById("password-input");
+//   const submitButton = document.getElementById("submit-button");
+//   const contentDiv = document.getElementById("content");
+
+//   const expectedPassword = "test"; // Replace with your desired password
+
+//   submitButton.addEventListener("click", function () {
+//     const enteredPassword = passwordInput.value;
+//     if (enteredPassword === expectedPassword) {
+//       passwordInput.value = "";
+//       window.location.href = "sp23.html"
+//     } else {
+//       alert("Incorrect password. Please try again.");
+//     }
+//   });
+// });
