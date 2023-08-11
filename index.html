@@ -7,7 +7,6 @@
       window.dataLayer = window.dataLayer || [];
       function gtag() { dataLayer.push(arguments); }
       gtag('js', new Date());
-
       gtag('config', 'G-4BC9V299P5');
     </script>
 
@@ -22,9 +21,34 @@
     <link rel="icon" type="image/png" href="favicon.png?version=1">
     <script src="js/assets/jquery.js"></script>
 
+    <script>
+      // Function to extract URL parameters
+      function getParameterByName(name, url) {
+        if (!url) {
+          url = window.location.href;
+        }
+        name = name.replace(/[\[\]]/g, '\\$&');
+        var regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)'),
+          results = regex.exec(url);
+        if (!results) return null;
+        if (!results[2]) return '';
+        return decodeURIComponent(results[2].replace(/\+/g, ' '));
+      }
+
+      // Function to update text element with parameter value
+      function updateTextElement() {
+        var helloValue = getParameterByName('hello');
+        var textElement = document.getElementById('textElement');
+        if (helloValue) {
+          textElement.textContent = helloValue;
+        }
+      }
+    </script>
+
+
 
   </head>
-  <body class="smooth-transition">
+  <body onload="updateTextElement()" class="smooth-transition">
     <div class="container-fluid">
       <header>
         <div class="container">
@@ -39,11 +63,11 @@
                 <div class="row">
                   <div class="col-md-6 col-md-offset-3">
                     <h1> <span class="typed">Hello</span></h1>
-                    <!-- <h2>Client</h2> -->
+                    <h2 id="textElement"></h2>
 
                     <form id="form" action="" class="form row">
                      
-                        <div class="tag">Please Enter Your Unique Password*</div>
+                        <div class="tag">Please Enter The Password*</div>
                         <input required type="password" id="password-input" placeholder="Password" class="form-control">
                         <button id="submit-button" class="btn btn-default">Submit</button>
                         <!-- <span class="p-md"></span> -->
@@ -55,7 +79,7 @@
               </div>
             </section>
 
-      <script>$(function () { $(".typed").typed({ strings: ["Hello", "Hola", "こんにちは", "Ciao", "Hallo", "Bonjour"], typeSpeed: 130, loop: true }); });</script>
+      <script>$(function () { $(".typed").typed({ strings: ["Hello", "Hola", "こんにちは", "Ciao", "Hallo", "안녕하세요", "Bonjour"], typeSpeed: 130, loop: true }); });</script>
      
 
        
@@ -69,7 +93,7 @@
                     <p>Los Angeles<br>California, 90048</p>
                   </div>
                   <div class="col-md-3 text-center">
-                    <p>mjwalkerprojects@gmail.com<br>424.354.3772</p>
+                    <p>mjwalkerprojects@gmail.com<br>323.457.3543</p>
                   </div>
                   <div class="col-md-3 text-center">
                     <ul class="social-links">
