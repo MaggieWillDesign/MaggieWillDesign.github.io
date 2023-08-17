@@ -1,0 +1,12 @@
+{
+  "name": "maggie walker",
+  "version": "0.1.0",
+  "private": true,
+
+
+"scripts": {
+  "build": "webpack --mode=production",
+  "build-dev": "webpack --mode=development"
+}
+
+}
