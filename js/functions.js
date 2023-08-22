@@ -286,8 +286,8 @@ document.addEventListener("DOMContentLoaded", function () {
   const contentDiv = document.getElementById("content");
 
   const passwordOutcomes = {
-    "happydev": "sp23.html",
-    "happydesign": "dp23.html",
+    "happydev": "pages/sp/sp23.html",
+    "happydesign": "pages/sp/dp23.html",
     // "happyux": ""
     // Add more password-outcome pairs as needed
   };

@@ -1,0 +1,13 @@
+.md-logo{
+  /* display: none; */
+  max-width: 20vw
+}
+
+@media (min-width: 992px) {
+
+.md-logo{
+  max-width: 8vw;
+  /* display: inherit; */
+}
+
+}
