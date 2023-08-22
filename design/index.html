@@ -931,12 +931,16 @@
 												<div data-ng-controller="ContactController" class="align-center wow fadeInUp" data-wow-duration=".4s">
 
 
-<div class="typeform-widget" data-url="https://form.typeform.com/to/R15BHtLB?typeform-medium=embed-snippet" style="width: 100%; height: 500px;"></div> <script> (function() { var qs,js,q,s,d=document, gi=d.getElementById, ce=d.createElement, gt=d.getElementsByTagName, id="typef_orm", b="https://embed.typeform.com/"; if(!gi.call(d,id)) { js=ce.call(d,"script"); js.id=id; js.src=b+"embed.js"; q=gt.call(d,"script")[0]; q.parentNode.insertBefore(js,q) } })() </script>
+<!-- <div class="typeform-widget" data-url="https://form.typeform.com/to/R15BHtLB?typeform-medium=embed-snippet"
+	style="width: 100%; height: 500px;"></div>
+<script> (function () { var qs, js, q, s, d = document, gi = d.getElementById, ce = d.createElement, gt = d.getElementsByTagName, id = "typef_orm", b = "https://embed.typeform.com/"; if (!gi.call(d, id)) { js = ce.call(d, "script"); js.id = id; js.src = b + "embed.js"; q = gt.call(d, "script")[0]; q.parentNode.insertBefore(js, q) } })() </script> -->
 
 
-														<!-- <h3>Hey <span data-ng-bind="formData.inputName||'There'">There</span>, happy to hear from you.</h3>
+														<h3>Hey <span data-ng-bind="formData.inputName||'There'">There</span>, happy to hear from you.</h3>
 														<div>
-																<form data-ng-submit="submit(contactform, $event)" name="contactform" method="post" class="row form-horizontal" role="form">
+
+							
+																<form id="form" action="https://formspree.io/f/xrgwpewl" name="contactform" method="POST" class="row form-horizontal" role="form">
 																		<div class="form-group input--hoshi col-sm-6" data-ng-class="{ 'has-error': contactform.inputName.$invalid && submitted }">
 																				<div class="input-wrap">
 																						<input autocomplete="off" data-ng-model="formData.inputName" type="text" class="form-control input__field input input__field--hoshi" id="inputName" name="inputName" placeholder="Name" required="">
@@ -966,10 +970,10 @@
 																</form>
 																<p data-ng-class="result">{{ resultMessage }}</p>
 														</div>
-												</div> -->
+												</div>
 
 												<div class="email-direct">
-														<p class="wow fadeInRight" data-wow-duration=".4s">Or simply email me at <a href="mailto:maggie@maggiedesigneye.com">maggie@maggiedesigneye.com</a></p>
+														<p class="wow fadeInRight" data-wow-duration=".4s">Or simply email me at <a href="mailto:mjwalkerprojects@gmail.com">mjwalkerprojects@gmail.com</a></p>
 												</div>
 										</section>
 										<!--Contact Sec-->
