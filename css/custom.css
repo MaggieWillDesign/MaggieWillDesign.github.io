@@ -25,3 +25,15 @@
 .preview {
     background-color: white;
 }
+
+
+/* Mobile */
+@media (max-width: 768px) {
+
+
+.custvis {
+        display: none !important;
+        
+    }
+
+}
