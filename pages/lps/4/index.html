@@ -385,10 +385,25 @@ var CRL8_SITENAME='justfab-dtf9gu';!function(){var e=window.crl8=window.crl8||{}
         </div>
     </section>
 
-    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <!-- <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.3.1/js/swiper.jquery.min.js"></script>
     <script src="assets/js/script.min.js"></script>
+
+
+    <script>
+        $(document).ready(function () {
+                $('.accordion__header').click(function () {
+
+                    $(".accordion__body").not($(this).next()).slideUp(400);
+                    $(this).next().slideToggle(400);
+
+                    $(".accordion__item").not($(this).closest(".accordion__item")).removeClass("open-accordion");
+                    $(this).closest(".accordion__item").toggleClass("open-accordion");
+                });
+            });
+    </script>
 </body>
 
 </html>
