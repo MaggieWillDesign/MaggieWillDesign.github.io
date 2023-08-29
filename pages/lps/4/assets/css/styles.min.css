@@ -1269,7 +1269,7 @@ h1, h2, h3, h4, h5, h6 {
   top: 0;
   bottom: 0;
   margin: auto;
-  /*background: url("../../assets/img/arrow-right-burg.svg") no-repeat center;*/
+  background: url("../../assets/img/arrow-right-black.svg") no-repeat center;
   background-size: contain;
   transition: all .4s ease;
 }
