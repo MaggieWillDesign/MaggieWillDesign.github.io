@@ -20,30 +20,8 @@
     <!-- endinject -->
     <link rel="icon" type="image/png" href="favicon.png?version=1">
     <script src="js/assets/jquery.js"></script>
+    <script src="js/assets/params-min.js"></script>
 
-    <script>
-      // Function to extract URL parameters
-      function getParameterByName(name, url) {
-        if (!url) {
-          url = window.location.href;
-        }
-        name = name.replace(/[\[\]]/g, '\\$&');
-        var regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)'),
-          results = regex.exec(url);
-        if (!results) return null;
-        if (!results[2]) return '';
-        return decodeURIComponent(results[2].replace(/\+/g, ' '));
-      }
-
-      // Function to update text element with parameter value
-      function updateTextElement() {
-        var helloValue = getParameterByName('hello');
-        var textElement = document.getElementById('textElement');
-        if (helloValue) {
-          textElement.textContent = helloValue;
-        }
-      }
-    </script>
 
 
 
@@ -63,7 +41,7 @@
                 <div class="row">
                   <div class="col-md-6 col-md-offset-3">
                     <h1> <span class="typed">Hello</span></h1>
-                    <h2 id="textElement"></h2>
+                    <h4 id="textElement"></h4>
 
                     <form id="form" action="" class="form row">
                      
