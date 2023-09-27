@@ -1,0 +1,89 @@
+/*-------------------------------
+
+    Custom stylesheet (custom.css)
+
+
+    --
+
+
+----------------------------*/
+.altp {
+    margin-bottom: 8px;
+}
+
+.yellow-bg {
+   
+    background-color: #FFFF00;
+
+}
+
+.extrsp {
+
+    margin-bottom: 40px;
+}
+
+.preview {
+    background-color: white;
+}
+
+.x1-bk {
+    
+    background-color: #F8EDEA;
+
+}
+
+.x2-bk {
+    
+    background-color: #F5F0E6;
+
+}
+
+/* .logoimg {
+
+    background-image: url('../images/logo.svg');
+    background-repeat: no-repeat;
+    width: 45px;
+    height: 45px;
+} */
+
+
+
+/* Hide the text initially */
+.hidden {
+    display: none;
+}
+
+/* Style the arrow button */
+#toggle-button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+/* Style the arrow character */
+#arrow {
+    font-size: 20px;
+    vertical-align: middle;
+    margin-right: 5px;
+}
+
+
+
+
+
+
+
+
+
+/* Mobile */
+@media (max-width: 768px) {
+
+
+.custvis {
+        display: none !important;
+        
+    }
+
+}
