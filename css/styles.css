@@ -1,3 +1,19 @@
+:root {
+
+    /*   var(--Color1); 
+     var(--Color2); 
+     var(--Color3);     */
+
+    --Color1: #171614;
+    --Color2: #5D737E;
+    --Color3: #ECE2D0;
+    --headingFont: 'Helvetica Neue', sans-serif;
+    --bodyFont: Arial, sans-serif;
+}
+
+
+
+
 header {
     padding: 45px 0;
     position: relative;

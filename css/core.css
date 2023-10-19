@@ -9,6 +9,21 @@
 @import url(https://fonts.googleapis.com/css?family=Heebo:400,300,500);
 @import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
 
+:root {
+
+  /*   var(--Color1); 
+     var(--Color2); 
+     var(--Color3);     */
+
+  --Color1: #171614;
+  --Color2: #5D737E;
+  --Color3: #ECE2D0;
+  --headingFont: 'Helvetica Neue', sans-serif;
+  --bodyFont: Arial, sans-serif;
+}
+
+
+
 html {
   font-family: sans-serif;
   -ms-text-size-adjust: 100%;
