@@ -1,6 +1,6 @@
 :root {
 
-    /*   var(--Color1); 
+    /* var(--Color1); 
      var(--Color2); 
      var(--Color3);     */
 
@@ -365,8 +365,10 @@ ul.navigation li:hover ul.dropdown {
     overflow: hidden
 }
 
+/* TO DO home grid hover state */
+
 .grid.masonry .item .thumb {
-    background: #2c55d5
+    background: #000;
 }
 
 @media screen and (max-width:992px) {
@@ -428,9 +430,10 @@ ul.navigation li:hover ul.dropdown {
     }
 }
 
+/* TO Do hover opacity */
 @media screen and (min-width:992px) {
     .grid.masonry .item:hover .thumb img {
-        opacity: .1
+        opacity: .3
     }
 
     .grid.masonry .item:hover .thumb:before {
