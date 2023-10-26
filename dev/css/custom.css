@@ -1,0 +1,40 @@
+/*-------------------------------
+
+    Custom stylesheet (custom.css)
+
+
+    --
+
+
+----------------------------*/
+.altp {
+    margin-bottom: 8px;
+}
+
+.yellow-bg {
+   
+    background-color: #FFFF00;
+
+}
+
+.extrsp {
+
+    margin-bottom: 500px;
+}
+
+.preview {
+    background-color: white;
+}
+
+
+
+/* Mobile */
+@media (max-width: 768px) {
+
+
+.custvis {
+        display: none !important;
+        
+    }
+
+}

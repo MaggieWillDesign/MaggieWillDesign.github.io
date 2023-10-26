@@ -1,0 +1,26 @@
+@import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
+
+
+.btn.btn-color,
+.btn.btn-default {
+    border-radius: 0;
+    background: #000;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 400;
+    padding: 16px 25px 15px;
+    border: 0;
+    font-family: Montserrat, Helvetica Neue, Helvetica, sans-serif;
+    font-size: 13px;
+    -webkit-transition: background .3s;
+    transition: background .3s;
+    font-size: 13px;
+}
+
+.btn.btn-color,
+.btn.btn-default:hover {
+    background: #2c55d5;
+    color: #fff;
+
+}
+
