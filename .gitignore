@@ -1,10 +1,13 @@
 *.log
 node_modules/
 .DS_Store
+
 js/functions.js
+js/assets/params.js
+
 pages/wwe
 images/portfolio/originals
-sdev
+
 _archive
 _trash
 _codeSamples

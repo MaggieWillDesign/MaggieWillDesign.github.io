@@ -53,7 +53,7 @@ function updateTextElement() {
         textElement.textContent = parameterValues['hi'] + " your password is happydev";
     }
     if (parameterValues['hi']) {
-        textElement.textContent = parameterValues['hello'] + " your password is 777";
+        textElement.textContent = parameterValues['hello'] + " your password is 123";
     }
 
     // You can similarly handle other parameters like 'anotherparam' here.
