@@ -81,6 +81,7 @@
  }
 
 
+
   @keyframes moveImage {
       0% {
           transform: translateX(0%);
@@ -175,4 +176,34 @@
     padding-left: 0%;
 }
 
+  
+
+
 }
+
+
+/* scroll images mobile  */
+
+@media (max-width: 768px) {
+    .moving-image {
+        max-width: 100%;
+    }
+
+    .moving-image-wrapper {
+        animation: moveImage 10s linear infinite;
+        /* Adjust animation duration for smaller screens */
+    }
+
+
+.custom-fluid-container {
+    width: 100%;
+    /* padding-right: 15px;
+    padding-left: 15px; */
+    margin-right: auto;
+    margin-left: auto;
+}
+
+
+}
+
+  
