@@ -5,10 +5,14 @@
      var(--Color3);     */
 
     --Color1: #171614;
-    --Color2: #5D737E;
+    --Color2: #337ab7;
+    /* --oldColor2: #5D737E; */
     --Color3: #ECE2D0;
     --headingFont: 'Helvetica Neue', sans-serif;
     --bodyFont: Arial, sans-serif;
+
+    /* bright blue #2c55d5 */
+    
 }
 
 
@@ -140,7 +144,7 @@ ul.navigation li a {
 
 ul.navigation li a.active,
 ul.navigation li a:hover {
-    color: #2c55d5;
+    color: var(--Color2);
     text-decoration: none
 }
 
@@ -465,7 +469,7 @@ ul.navigation li:hover ul.dropdown {
 }
 
 .grid.classic .item .thumb {
-    background: #2c55d5;
+    background: var(--Color2);
     position: relative;
     overflow: hidden
 }
@@ -487,7 +491,7 @@ ul.navigation li:hover ul.dropdown {
     left: 0;
     bottom: -40px;
     opacity: 0;
-    background: #2c55d5;
+    background: var(--Color2);
     z-index: 3;
     -webkit-transition: all .3s;
     transition: all .3s
@@ -621,7 +625,7 @@ ul.navigation li:hover ul.dropdown {
 
 .filter-container ul.filters li a.filter.active,
 .filter-container ul.filters li a.filter:hover {
-    color: #2c55d5;
+    color: var(--Color2);
     opacity: 1
 }
 
@@ -682,7 +686,7 @@ a.item .btn-secondary {
     -webkit-transition: all .3s;
     transition: all .3s;
     font-size: 13px;
-    color: #2c55d5;
+    color: var(--Color2);
     text-transform: uppercase
 }
 
@@ -705,7 +709,7 @@ a.item .btn-secondary span:last-child {
 
 a.item:hover .btn-secondary {
     padding: 0 20px 4px;
-    background: #2c55d5;
+    background: var(--Color2);
     color: #fff
 }
 
@@ -866,7 +870,7 @@ aside:before {
 .btn.btn-default:active,
 .btn.btn-default:focus,
 .btn.btn-default:hover {
-    background: #2c55d5;
+    background: var(--Color2);
     color: #fff
 }
 
@@ -985,7 +989,7 @@ footer.bottom a {
 }
 
 .label:hover {
-    color: #2c55d5 !important;
+    color: var(--Color2);!important;
     border-color: #2c55d5
 }
 
@@ -1062,13 +1066,13 @@ ul.item-list li span:before {
 
 ul.item-list li a:hover,
 ul.item-list li span:hover {
-    color: #2c55d5;
+    color: var(--Color2);
     padding-left: 45px
 }
 
 ul.item-list li a:hover:before,
 ul.item-list li span:hover:before {
-    border-color: #2c55d5;
+    border-color: var(--Color2);
     width: 30px
 }
 
@@ -1126,7 +1130,7 @@ ul.tag-list li {
 
 .pagination .next:hover,
 .pagination .previous:hover {
-    background: #2c55d5;
+    background: var(--Color2);
     color: #fff
 }
 

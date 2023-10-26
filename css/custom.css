@@ -147,6 +147,11 @@
 
 }
 
+
+.centered-icon {
+    vertical-align: middle;
+}
+
 /* Mobile */
 @media (max-width: 1000px) {
 

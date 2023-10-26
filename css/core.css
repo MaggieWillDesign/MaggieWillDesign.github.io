@@ -16,11 +16,13 @@
      var(--Color3);     */
 
   --Color1: #171614;
-  --Color2: #5D737E;
+  --Color2: #337ab7;
+  /* --oldColor2: #5D737E; */
   --Color3: #ECE2D0;
   --headingFont: 'Helvetica Neue', sans-serif;
   --bodyFont: Arial, sans-serif;
 }
+
 
 
 
@@ -16761,7 +16763,7 @@ html.dark .btn-default {
 html.dark .btn-default.active,
 html.dark .btn-default:focus,
 html.dark .btn-default:hover {
-  background: #2c55d5;
+  background: var(--Color2);
   color: #fff !important;
   opacity: 1
 }
@@ -17296,7 +17298,7 @@ h3 {
 }
 
 h4 {
-  color: #2c55d5;
+  color: var(--Color2);
   font-size: 1.5em
 }
 
@@ -17305,7 +17307,7 @@ h5 {
 }
 
 h6 {
-  color: #2c55d5
+  color: var(--Color2);
 }
 
 p {
