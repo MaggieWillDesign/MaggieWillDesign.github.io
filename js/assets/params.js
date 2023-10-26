@@ -50,10 +50,10 @@ function updateTextElement() {
     var textElement = document.getElementById('textElement');
 
     if (parameterValues['hello']) {
-        textElement.textContent = parameterValues['hi'] + " your password is happydev";
+        textElement.textContent = parameterValues['hello'] + " your password is 159";
     }
     if (parameterValues['hi']) {
-        textElement.textContent = parameterValues['hello'] + " your password is 123";
+        textElement.textContent = parameterValues['hi'] + " your password is happydesign";
     }
 
     // You can similarly handle other parameters like 'anotherparam' here.
