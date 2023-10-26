@@ -100,14 +100,13 @@
 
 
 
-.video-container {
-    display: none;
+/* .video-container {
     visibility: hidden;
     position: relative;
     overflow: hidden;
     padding-bottom: 56.25%;
     /* Adjust this to your video's aspect ratio */
-}
+/* }  */
 
 #scrollVideo {
     position: absolute;
