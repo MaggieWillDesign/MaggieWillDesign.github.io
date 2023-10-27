@@ -44,7 +44,7 @@ function getParametersByName(names, url) {
 }
 
 function updateTextElement() {
-    var parameterNames = ['hello', 'hi', 'pw', 'linkedin']; // Add more parameter names as needed
+    var parameterNames = ['hello', 'hi', 'pw', 'source']; // Add more parameter names as needed
     var parameterValues = getParametersByName(parameterNames);
 
     var textElement = document.getElementById('textElement');
@@ -65,8 +65,8 @@ function updateTextElement() {
     }
     
     // linked in guest
-    if (parameterValues['linkedin']) {
-        textElement.textContent = parameterValues['linkedin'] + " get your password below";
+    if (parameterValues['source']) {
+        textElement.textContent = parameterValues['source'] + " get your password below";
        
     }
 
