@@ -44,17 +44,33 @@ function getParametersByName(names, url) {
 }
 
 function updateTextElement() {
-    var parameterNames = ['hello', 'hi']; // Add more parameter names as needed
+    var parameterNames = ['hello', 'hi', 'pw', 'linkedin']; // Add more parameter names as needed
     var parameterValues = getParametersByName(parameterNames);
 
     var textElement = document.getElementById('textElement');
 
-    if (parameterValues['hello']) {
-        textElement.textContent = parameterValues['hello'] + " your password is 159";
-    }
+    // senior design
     if (parameterValues['hi']) {
-        textElement.textContent = parameterValues['hi'] + " your password is happydesign";
+        textElement.textContent = parameterValues['hi'] + " your password is 217";
     }
+
+    //art director
+    if (parameterValues['pw']) {
+        textElement.textContent = parameterValues['pw'] + " your password is 159";
+    }
+
+    // product design
+    if (parameterValues['hello']) {
+        textElement.textContent = parameterValues['hello'] + " your password is 281";
+    }
+    
+    // linked in guest
+    if (parameterValues['linkedin']) {
+        textElement.textContent = parameterValues['linkedin'] + " get your password below";
+       
+    }
+
+   
 
     // You can similarly handle other parameters like 'anotherparam' here.
 }
