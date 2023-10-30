@@ -63,6 +63,14 @@ function updateTextElement() {
             message = "M13 your password is 141";
             break;
         
+        case parameterValues['hello'] === 'Starz':
+            message = "M13 your password is 151";
+            break;
+
+        case parameterValues['hello'] === 'iSpot':
+            message = "M13 your password is 151";
+            break;
+        
     }
 
     textElement.textContent = message;
@@ -88,8 +96,11 @@ document.addEventListener("DOMContentLoaded", function () {
             case "217":
             // client label - M13  
             case "141":
-            // client label    
-            case "152":
+            // client label  - Starz   
+            case "151":
+            // client label  - iSpot   
+            case "163":
+
 
                 redirectLink = "pages/1/work.html";
                 break;
