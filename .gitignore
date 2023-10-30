@@ -3,7 +3,9 @@ node_modules/
 .DS_Store
 
 js/functions.js
+js/assets/params_old.js
 js/assets/params.js
+js/assets/params_test.js
 
 pages/wwe
 images/portfolio/originals
@@ -11,4 +13,5 @@ images/portfolio/originals
 _archive
 _trash
 _codeSamples
+
 
