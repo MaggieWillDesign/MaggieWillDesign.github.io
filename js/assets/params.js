@@ -34,25 +34,26 @@ function updateTextElement() {
     switch (true) {
      
         case parameterValues['hi'] === 'ARUP':
-            message = "ARUP your password is 217";
+            message = parameterValues['hi'] + " your password is 217";
             break;
 
         case parameterValues['hi'] === 'Capital Group':
-            message = "Capital Group your password is 217";
+            message = parameterValues['hi'] + " your password is 217";
             break;
 
         //use double quote mark due to apostrophie 
         case parameterValues['hi'] === "GT's":
-            message = "GT's your password is 217";
+            message = parameterValues['hi'] + " your password is 217";
             break;
 
 
         case parameterValues['hi'] === 'JJM':
-            message = "JJM your password is 217";
+            message = parameterValues['hi'] + " your password is 217";
             break;
 
         case parameterValues['hi'] === 'Live Nation':
-            message = "Live Nation your password is 217";
+            message = parameterValues['hi'] + " your password is 217";
+            
             break;
     
         case parameterValues['hello'] === 'Vivian':
@@ -60,15 +61,16 @@ function updateTextElement() {
             break;
 
         case parameterValues['hello'] === 'M13':
-            message = "M13 your password is 141";
+          
+            message = parameterValues['hello'] + " your password is 141";
             break;
         
         case parameterValues['hello'] === 'Starz':
-            message = "M13 your password is 151";
+            message = parameterValues['hello'] + " your password is 151";
             break;
 
         case parameterValues['hello'] === 'iSpot':
-            message = "M13 your password is 151";
+            message = parameterValues['hello'] + " your password is 163";
             break;
         
     }
