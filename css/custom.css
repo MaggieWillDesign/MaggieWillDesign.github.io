@@ -134,6 +134,7 @@
     font-family: Montserrat, Helvetica Neue, Helvetica, sans-serif;
     font-size: 14px;
     font-weight: 400;
+    /* padding: 0px 20px 0px 20px; */
     /* text-align: left; */
 
 
@@ -166,7 +167,10 @@
 
 .role {
         
-        font-size: 12px;
+        /* font-size: 12px; */
+        display: none;
+        /* padding: 0px; */
+
      
 
     }
