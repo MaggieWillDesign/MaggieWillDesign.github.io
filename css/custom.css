@@ -134,6 +134,15 @@
     font-family: Montserrat, Helvetica Neue, Helvetica, sans-serif;
     font-size: 14px;
     font-weight: 400;
+    /* text-align: left; */
+
+
+}
+.work-read {
+    font-family: Montserrat, Helvetica Neue, Helvetica, sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    text-align: left;
 
 
 }
@@ -156,6 +165,13 @@
 @media (max-width: 1000px) {
 
 .role {
+        
+        font-size: 12px;
+     
+
+    }
+
+.work-read {
         
         font-size: 12px;
      
