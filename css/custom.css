@@ -7,24 +7,6 @@
 
 
 ----------------------------*/
-.altp {
-    margin-bottom: 8px;
-}
-
-.yellow-bg {
-   
-    background-color: #FFFF00;
-
-}
-
-.extrsp {
-
-    margin-bottom: 40px;
-}
-
-.preview {
-    background-color: white;
-}
 
 .x1-bk {
     
@@ -45,13 +27,9 @@
     /* electric green */
     /* background-color: #F3FBF7; */
     /* alt green */
-    /* background-color: #EDF5F3; */
-
-    
-   
+    /* background-color: #EDF5F3; */ 
 
 }
-
 
 .x4-bk {
    
@@ -92,14 +70,26 @@
       }
   }
 
+
+.altp {
+    margin-bottom: 8px;
+}
+
+.extrsp {
+
+    margin-bottom: 40px;
+}
+
+.preview {
+    background-color: white;
+}
+
 .pr-image {
     padding-right: 2%;
 }
 .pl-image {
     padding-left: 2%;
 }
-
-
 
 /* .video-container {
     visibility: hidden;
@@ -130,9 +120,9 @@
     cursor: pointer;
 }
 
-.role {
+.special-note {
     font-family: Montserrat, Helvetica Neue, Helvetica, sans-serif;
-    font-size: 14px;
+    font-size: .9em;
     font-weight: 400;
     /* padding: 0px 20px 0px 20px; */
     /* text-align: left; */
@@ -141,19 +131,41 @@
 }
 .work-read {
     font-family: Montserrat, Helvetica Neue, Helvetica, sans-serif;
-    font-size: 14px;
+    font-size: .9em;
     font-weight: 400;
     text-align: left;
 
 
 }
 
-.role-year {
+
+.role-title {
     font-family: Montserrat, Helvetica Neue, Helvetica, sans-serif;
-    font-size: 12px;
-    font-weight: 400;
+    font-size: .8em;
+    font-weight: 600;
+    color: #555;
     
     /* color: #5D737E; */
+
+}
+
+.role-desc {
+    font-family: Montserrat, Helvetica Neue, Helvetica, sans-serif;
+    font-size: .8em;
+    font-weight: 400;
+    color: #555;
+    
+    /* color: #5D737E; */
+
+}
+
+.d-process-list {
+    display: block;
+
+}
+
+.m-process-list {
+    display: none;
 
 }
 
@@ -165,27 +177,9 @@
 /* Mobile */
 @media (max-width: 1000px) {
 
-.role {
+.special-note {
         
-        /* font-size: 12px; */
         display: none;
-        /* padding: 0px; */
-
-     
-
-    }
-
-.work-read {
-        
-        font-size: 12px;
-     
-
-    }
-.role-year {
-        
-        font-size: 10px;
-     
-
     }
 
 .pr-image {
@@ -196,7 +190,14 @@
     padding-left: 0%;
 }
 
-  
+.d-process-list {
+    display: none;
+
+}
+.m-process-list {
+    display: block;
+
+}
 
 
 }
