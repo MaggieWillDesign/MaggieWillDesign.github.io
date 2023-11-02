@@ -2010,9 +2010,17 @@ pre code {
   clear: both
 }
 
+/* to do */
 @media (min-width:768px) {
   .container {
+    
     width: 720px
+    
+    /* width: 100%;
+    margin-right: auto;
+      margin-left: auto;
+      padding-left: 0;
+      padding-right: 0 */
   }
 }
 
