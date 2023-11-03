@@ -124,6 +124,7 @@
 .icon-rotated {
     
     transform: rotate(90deg);
+    /* transform: rotate(45deg); */
     transition: transform 0.3s ease;
     /* Rotate the icon 90 degrees (pointing down) */
 }
@@ -198,6 +199,17 @@
     /* Horizontal center alignment */
 }
 
+.arrow-icon {
+
+    
+    /* background-color: pink; */
+    vertical-align: middle;
+        /* Adjust vertical alignment */
+        /* margin-top: 5px; */
+} 
+
+
+
 .highlighted {
     background-color: #DCFF69;
 }
@@ -243,20 +255,6 @@ padding: 0px 30px 0px 30px;
 .desc-title {
     padding-left: 10px;
 }
-
-
-
-
-/* .icon-wrapper {
-    margin-bottom: 20px;
-} */
-
-
-/* .icon-wrapper-open {
-    margin-bottom: 0px;
-} */
-
-
 
 }
 
