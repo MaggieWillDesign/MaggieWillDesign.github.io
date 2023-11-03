@@ -256,6 +256,18 @@ padding: 0px 30px 0px 30px;
     padding-left: 10px;
 }
 
+
+.arrow-icon {
+
+
+    /* background-color: pink; */
+    vertical-align: middle;
+    margin-left: 2px;
+    margin-bottom: 2px;
+    /* Adjust vertical alignment */
+    /* margin-top: 5px; */
+}
+
 }
 
 
