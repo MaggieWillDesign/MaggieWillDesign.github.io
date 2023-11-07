@@ -211,8 +211,10 @@
 
 
 .highlighted {
-    background-color: #DCFF69;
+    /* background-color: #DCFF69; */
+    background-color: rgba(220, 255, 105, 0.5);
 }
+
 
 
 
