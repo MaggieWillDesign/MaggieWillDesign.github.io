@@ -215,6 +215,13 @@
     background-color: rgba(220, 255, 105, 0.5);
 }
 
+.mvis {
+    display: none;
+}
+
+.dvis {
+    display: block;
+}
 
 
 
@@ -268,6 +275,14 @@ padding: 0px 30px 0px 30px;
     margin-bottom: 3px;
     /* Adjust vertical alignment */
     /* margin-top: 5px; */
+}
+
+.mvis {
+    display: block;
+}
+
+.dvis {
+    display: none;
 }
 
 }
