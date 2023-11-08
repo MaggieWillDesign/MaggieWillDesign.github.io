@@ -285,7 +285,21 @@ padding: 0px 30px 0px 30px;
     display: none;
 }
 
+.scroll-container {
+    max-height: 300px;
+    /* Set the maximum height as needed */
+    overflow-y: scroll;
+   
+
 }
+
+.item-list {
+    list-style: none;
+    padding: 0;
+}
+
+}
+
 
 
 /* scroll images mobile  */
@@ -308,6 +322,7 @@ padding: 0px 30px 0px 30px;
     margin-right: auto;
     margin-left: auto;
 }
+
 
 }
 

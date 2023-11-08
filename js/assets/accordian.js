@@ -13,4 +13,7 @@ $(document).ready(function () {
         $(".accordion__item").not($(this).closest(".accordion__item")).removeClass("open-accordion");
         $(this).closest(".accordion__item").toggleClass("open-accordion");
     });
+
 });
+
+
