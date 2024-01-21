@@ -249,6 +249,34 @@
 }
 
 
+/* Style for the hover image */
+
+.logo-cont img {
+    transition: opacity 0.3s ease-in-out;
+}
+
+
+.logo-cont .hover-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+/* Show the hover image on hover */
+.logo-cont:hover img {
+    opacity: 0;
+}
+
+
+.logo-cont:hover .hover-image {
+    opacity: 1;
+}
+
+
+
+
 
 
 /* Mobile */
