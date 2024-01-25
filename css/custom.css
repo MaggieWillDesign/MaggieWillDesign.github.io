@@ -275,6 +275,21 @@
 }
 
 
+/* rounded corner image div */
+
+ .image-container {
+    border-radius: 10px;
+    /* You can adjust the value to control the roundness of the corners */
+    overflow: hidden;
+    /* This ensures that the image stays within the rounded corners */
+}
+
+.image-container img {
+    width: 100%;
+    /* Ensure the image takes the full width of the container */
+    height: auto;
+    /* Maintain the image's aspect ratio */
+}
 
 
 
