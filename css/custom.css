@@ -278,7 +278,7 @@
 /* rounded corner image div */
 
  .image-container {
-    border-radius: 10px;
+    border-radius: 24px;
     /* You can adjust the value to control the roundness of the corners */
     overflow: hidden;
     /* This ensures that the image stays within the rounded corners */
@@ -290,6 +290,18 @@
     height: auto;
     /* Maintain the image's aspect ratio */
 }
+
+
+
+/* / GSAP footer test  */
+.gasp-site-main {
+    position: relative;
+    padding: 20px;
+    min-height: 200vh;
+    z-index: 100;
+    background-color: pink;
+}
+
 
 
 
