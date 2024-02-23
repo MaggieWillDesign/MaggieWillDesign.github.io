@@ -2,17 +2,11 @@
 node_modules/
 .DS_Store
 js/functions.js
-js/assets/params_old.js
-js/assets/params_test.js
 js/assets/params.js
-pages1/wwe
-images/portfolio/originals
-_archive
-_trash
-_codeSamples
-css/custom-test.css
-pages1/tests
-pages1/NA
+
+
+
+
 
 
 
