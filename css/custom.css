@@ -302,6 +302,52 @@
     background-color: pink;
 }
 
+/* 1:1 video */
+
+.embed-responsive-1by1 {
+    padding-bottom: 100%;
+    /* 1:1 aspect ratio */
+}
+
+.embed-responsive-1by1 .embed-responsive-item {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* padding: 5px; */
+}
+
+.embed-pad-right {
+    padding-right: 5px;
+}
+
+.embed-pad-left {
+    padding-left: 5px;
+}
+
+
+ /* 9:16 video  */
+
+ .embed-responsive-9by16 {
+    position: relative;
+        /* padding-bottom: 177.78%; */
+    padding-bottom: 157.78%;
+        /* 16:9 aspect ratio */
+    height: 0;
+     
+     
+ }
+
+ .embed-responsive-9by16 .embed-responsive-item {
+     position: absolute;
+     top: 0;
+     left: 0;
+     width: 100%;
+     height: 100%;
+     padding: 0px 50px 0px 50px ;
+    
+ }
 
 
 
@@ -348,7 +394,6 @@ padding: 0px 30px 0px 30px;
 
 
 .arrow-icon {
-
 
     /* background-color: pink; */
     vertical-align: middle;
