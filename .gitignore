@@ -3,6 +3,7 @@ node_modules/
 .DS_Store
 js/functions.js
 js/assets/params.js
+js/assets/paramsnewTest.js
 
 
 
