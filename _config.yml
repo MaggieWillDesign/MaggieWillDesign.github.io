@@ -1,0 +1,7 @@
+title: Maggie Will Design
+description: Design Portfolio of Maggie Williams
+baseurl: "" # the subpath
+url: "https://maggiewilldesign.github.io" # the base hostname & protocol 
+
+# Build settings
+theme: minima
