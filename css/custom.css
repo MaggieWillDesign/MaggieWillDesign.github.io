@@ -51,6 +51,13 @@
 
 }
 
+.hidden {
+    visibility: hidden;
+}
+
+
+
+
 
 .moving-image-wrapper {
     display: flex;
