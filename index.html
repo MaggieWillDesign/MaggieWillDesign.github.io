@@ -10,6 +10,20 @@
       gtag('config', 'G-4BC9V299P5');
     </script>
 
+    <!-- GA unique visits load before scripts -->
+    <script src="https://apis.google.com/js/platform.js"></script>
+    <script src="https://apis.google.com/js/api.js"></script>
+    <script>
+      // Initialize gapi once the library is loaded
+      gapi.load('client', () => {
+        console.log('Google API client library loaded.');
+      });
+    </script>
+    <!-- end GA  -->
+
+
+
+
     <title>Maggie Will Design</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <meta charset="utf-8">
