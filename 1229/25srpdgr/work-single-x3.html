@@ -37,7 +37,9 @@
         <div class="col-md-3 logo-cont"><a href="work.html" class="brand">
       
             <img alt="Maggie Will Design" src="../../images/logo.svg">
+            <!-- <img alt="Maggie Will Design" src="../../images/logo-dark.svg"> -->
             <img class="hover-image" src="../../images/logohover.svg" alt="Hover Image">
+            <!-- <img class="hover-image" src="../../images/logohover-dark.svg" alt="Hover Image"> -->
       
           </a>
         </div>
@@ -1149,18 +1151,24 @@
   <script src="../../modules/titan-slider/titan-slider.js"></script>
   <script src="../../modules/tera-lightbox/tera-lightbox.js"></script>
   <script src="../../js/assets/animsition.js"></script>
-  <script src="../../js/functions-min.js"></script>
+  <script src="../../js/functions.js"></script>
+  <!-- <script src="../../js/functions-min.js"></script> -->
   <script src="../../js/assets/vidsetting.js"></script>
   <script src="../../js/assets/accordian.js"></script>
 
   <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 
+  <script>
 
-
-
-
-
+    // Call switchLogo with a delay
+ 
+      setTimeout(function () {
+        switchLogo();
+        console.log("switch logo called");
+      }, 5000); // Delay of 1000 milliseconds (1 second)
+    
+  </script>
 
 </body>
 

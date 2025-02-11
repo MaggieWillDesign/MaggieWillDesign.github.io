@@ -3,6 +3,7 @@ node_modules/
 .DS_Store
 js/functions.js
 js/functions-old.js
+js/functions-old2.js
 
 js/assets/params.js
 js/assets/paramsnewTest.js
@@ -15,8 +16,10 @@ js/assets/params copy 2.7.25.js
 getpassword copy.html
 index copy.html
 favicon-old.png
+images/logo-old-old.svg
 images/logo-old.svg
 images/logohover-old.svg
+images/logohover-old-old.svg
 
 css/custom-old.css
 
