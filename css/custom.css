@@ -276,16 +276,17 @@
 /* Style for the hover image */
 
 .logo-cont img {
-    transition: opacity 0.3s ease-in-out;
+    /* Remove transition to prevent fading */
+    transition: none !important;
 }
-
 
 .logo-cont .hover-image {
     position: absolute;
     top: 0;
     left: 0;
     opacity: 0;
-    transition: opacity 0.3s ease-in-out;
+    /* Remove transition to prevent fading */
+    transition: none !important;
 }
 
 /* Show the hover image on hover */
@@ -293,9 +294,17 @@
     opacity: 0;
 }
 
-
 .logo-cont:hover .hover-image {
     opacity: 1;
+}
+
+/* Ensure no transition in dark mode */
+html.dark .logo-cont img {
+    transition: none !important;
+}
+
+html.dark .logo-cont .hover-image {
+    transition: none !important;
 }
 
 
