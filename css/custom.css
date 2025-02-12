@@ -482,7 +482,12 @@ padding: 0px 30px 0px 30px;
 
 .logo-cont:hover img,
 .logo-cont:hover .hover-image {
-    opacity: 0;
+    opacity: 1;
+}
+
+.logo-cont .hover-image {
+    visibility: hidden;
+    /* transition: none; */
 }
 
 
