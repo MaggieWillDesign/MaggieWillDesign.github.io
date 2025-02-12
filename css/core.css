@@ -17565,3 +17565,20 @@ span.italic {
   text-align: center;
   padding: 20px
 }
+
+/* Dark mode logo switching */
+#logo {
+    content: url('../images/logo.svg');
+}
+
+.hover-image {
+    content: url('../images/logohover.svg');
+}
+
+html.dark #logo {
+    content: url('../images/logo-dark.svg');
+}
+
+html.dark .hover-image {
+    content: url('../images/logohover-dark.svg');
+}
