@@ -36,12 +36,15 @@
     <link rel="icon" type="image/png" href="favicon.png?version=1">
     <link rel="icon" type="image/png" href="../../favicon.png?version=1">
     <script src="js/assets/jquery.js"></script>
-    <script src="js/assets/params-min.js"></script> 
-    <!-- <script src="js/assets/params.js"></script> -->
+    <!-- <script src="js/assets/params-min.js"></script> -->
+    <script>
+      var script = document.createElement("script");
+      script.src = "js/assets/params-min.js?v=" + Math.random();
+      document.head.appendChild(script);
+    </script>
+
 
    
-
-
   </head>
   <body onload="updateTextElement()" class="smooth-transition">
     <div class="container-fluid">
