@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Product Analytics Dashboard</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Work+Sans:300,400,600,700">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.4.1/css/simple-line-icons.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/styles.min.css">
+    <style>
+        .dashboard-header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 1rem 0;
+            margin-bottom: 2rem;
+        }
+        .stat-card {
+            background: white;
+            border-radius: 10px;
+            padding: 1.5rem;
+            margin-bottom: 1rem;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            transition: transform 0.2s;
+        }
+        .stat-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+        }
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #667eea;
+        }
+        .stat-label {
+            color: #6c757d;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        .quick-actions {
+            background: #f8f9fa;
+            border-radius: 10px;
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+        }
+        .action-btn {
+            background: white;
+            border: 2px solid #dee2e6;
+            border-radius: 8px;
+            padding: 1rem;
+            text-align: center;
+            transition: all 0.2s;
+            cursor: pointer;
+            text-decoration: none;
+            color: #495057;
+        }
+        .action-btn:hover {
+            border-color: #667eea;
+            background: #667eea;
+            color: white;
+            text-decoration: none;
+        }
+        .recent-activity {
+            background: white;
+            border-radius: 10px;
+            padding: 1.5rem;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        .activity-item {
+            padding: 0.75rem 0;
+            border-bottom: 1px solid #e9ecef;
+        }
+        .activity-item:last-child {
+            border-bottom: none;
+        }
+        .sidebar-nav {
+            background: white;
+            border-radius: 10px;
+            padding: 1rem;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            margin-bottom: 1rem;
+        }
+        .nav-item-custom {
+            padding: 0.5rem 1rem;
+            margin: 0.25rem 0;
+            border-radius: 6px;
+            transition: background 0.2s;
+        }
+        .nav-item-custom:hover {
+            background: #f8f9fa;
+        }
+        .nav-item-custom.active {
+            background: #667eea;
+            color: white;
+        }
+        .chart-container {
+            background: white;
+            border-radius: 10px;
+            padding: 1.5rem;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            margin-bottom: 1rem;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Dashboard Header -->
+    <div class="dashboard-header">
+        <div class="container-fluid">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <h1 class="h3 mb-0"><i class="fas fa-chart-line mr-2"></i>Product Analytics Dashboard</h1>
+                    <p class="mb-0 opacity-75">Real-time insights and performance metrics</p>
+                </div>
+                <div class="col-md-6 text-right">
+                    <div class="dropdown">
+                        <button class="btn btn-outline-light dropdown-toggle" type="button" data-toggle="dropdown">
+                            <i class="fas fa-filter mr-2"></i>Select Brand
+                        </button>
+                        <div class="dropdown-menu">
+                            <h6 class="dropdown-header">North America</h6>
+                            <a class="dropdown-item" href="#" onclick="updateDashboard('justfab-na')">
+                                <i class="fas fa-shoe-prints mr-2"></i>JustFab NA
+                            </a>
+                            <a class="dropdown-item" href="#" onclick="updateDashboard('fabletics-na')">
+                                <i class="fas fa-running mr-2"></i>Fabletics NA
+                            </a>
+                            <a class="dropdown-item" href="#" onclick="updateDashboard('shoedazzle')">
+                                <i class="fas fa-high-heel mr-2"></i>ShoeDazzle
+                            </a>
+                            <a class="dropdown-item" href="#" onclick="updateDashboard('fabkids')">
+                                <i class="fas fa-child mr-2"></i>FabKids
+                            </a>
+                            <div class="dropdown-divider"></div>
+                            <h6 class="dropdown-header">Europe</h6>
+                            <a class="dropdown-item" href="#" onclick="updateDashboard('justfab-eu')">
+                                <i class="fas fa-shoe-prints mr-2"></i>JustFab EU
+                            </a>
+                            <a class="dropdown-item" href="#" onclick="updateDashboard('fabletics-eu')">
+                                <i class="fas fa-running mr-2"></i>Fabletics EU
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid">
+        <div class="row">
+            <!-- Sidebar -->
+            <div class="col-lg-3 col-md-4">
+                <div class="sidebar-nav">
+                    <h6 class="text-muted mb-3">NAVIGATION</h6>
+                    <div class="nav-item-custom active">
+                        <i class="fas fa-tachometer-alt mr-2"></i>Dashboard
+                    </div>
+                    <div class="nav-item-custom">
+                        <i class="fas fa-chart-bar mr-2"></i>Top Converters
+                    </div>
+                    <div class="nav-item-custom">
+                        <i class="fas fa-star mr-2"></i>New Arrivals
+                    </div>
+                    <div class="nav-item-custom">
+                        <i class="fas fa-boxes mr-2"></i>Inventory
+                    </div>
+                    <div class="nav-item-custom">
+                        <i class="fas fa-tags mr-2"></i>Products
+                    </div>
+                    <div class="nav-item-custom">
+                        <i class="fas fa-cog mr-2"></i>Settings
+                    </div>
+                </div>
+
+                <!-- Quick Stats -->
+                <div class="sidebar-nav">
+                    <h6 class="text-muted mb-3">QUICK STATS</h6>
+                    <div class="d-flex justify-content-between align-items-center py-2">
+                        <span class="small">Total Products</span>
+                        <span class="badge badge-primary" id="total-products">1,247</span>
+                    </div>
+                    <div class="d-flex justify-content-between align-items-center py-2">
+                        <span class="small">Active Feeds</span>
+                        <span class="badge badge-success" id="active-feeds">8</span>
+                    </div>
+                    <div class="d-flex justify-content-between align-items-center py-2">
+                        <span class="small">Low Inventory</span>
+                        <span class="badge badge-warning" id="low-inventory">23</span>
+                    </div>
+                    <div class="d-flex justify-content-between align-items-center py-2">
+                        <span class="small">Out of Stock</span>
+                        <span class="badge badge-danger" id="out-of-stock">5</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Main Content -->
+            <div class="col-lg-9 col-md-8">
+                <!-- Stats Cards Row -->
+                <div class="row">
+                    <div class="col-xl-3 col-md-6">
+                        <div class="stat-card text-center">
+                            <div class="stat-number" id="stat-conversions">1,247</div>
+                            <div class="stat-label">Total Conversions</div>
+                            <small class="text-success"><i class="fas fa-arrow-up"></i> +12.5% from last week</small>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-md-6">
+                        <div class="stat-card text-center">
+                            <div class="stat-number text-success" id="stat-revenue">$45.2K</div>
+                            <div class="stat-label">Revenue Today</div>
+                            <small class="text-success"><i class="fas fa-arrow-up"></i> +8.2% from yesterday</small>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-md-6">
+                        <div class="stat-card text-center">
+                            <div class="stat-number text-warning" id="stat-inventory">89.3%</div>
+                            <div class="stat-label">Inventory Health</div>
+                            <small class="text-warning"><i class="fas fa-arrow-down"></i> -2.1% from last week</small>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-md-6">
+                        <div class="stat-card text-center">
+                            <div class="stat-number text-info" id="stat-new-arrivals">24</div>
+                            <div class="stat-label">New Arrivals</div>
+                            <small class="text-info"><i class="fas fa-clock"></i> In the last 24h</small>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Quick Actions -->
+                <div class="quick-actions">
+                    <h5 class="mb-3"><i class="fas fa-bolt mr-2"></i>Quick Actions</h5>
+                    <div class="row">
+                        <div class="col-md-2 col-6 mb-3">
+                            <a href="#" class="action-btn d-block">
+                                <i class="fas fa-trophy fa-2x mb-2 d-block"></i>
+                                <small>Top Shoes<br>10 Day</small>
+                            </a>
+                        </div>
+                        <div class="col-md-2 col-6 mb-3">
+                            <a href="#" class="action-btn d-block">
+                                <i class="fas fa-clock fa-2x mb-2 d-block"></i>
+                                <small>Top Shoes<br>1 Day</small>
+                            </a>
+                        </div>
+                        <div class="col-md-2 col-6 mb-3">
+                            <a href="#" class="action-btn d-block">
+                                <i class="fas fa-star fa-2x mb-2 d-block"></i>
+                                <small>New<br>Arrivals</small>
+                            </a>
+                        </div>
+                        <div class="col-md-2 col-6 mb-3">
+                            <a href="#" class="action-btn d-block">
+                                <i class="fas fa-exclamation-triangle fa-2x mb-2 d-block"></i>
+                                <small>Low<br>Inventory</small>
+                            </a>
+                        </div>
+                        <div class="col-md-2 col-6 mb-3">
+                            <a href="#" class="action-btn d-block">
+                                <i class="fas fa-tshirt fa-2x mb-2 d-block"></i>
+                                <small>Top<br>Apparel</small>
+                            </a>
+                        </div>
+                        <div class="col-md-2 col-6 mb-3">
+                            <a href="#" class="action-btn d-block">
+                                <i class="fas fa-gem fa-2x mb-2 d-block"></i>
+                                <small>Top<br>Accessories</small>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Current View -->
+                <div class="row">
+                    <div class="col-lg-8">
+                        <div class="chart-container">
+                            <div class="d-flex justify-content-between align-items-center mb-3">
+                                <h5 class="mb-0" id="current-feed-title">JustFab Top Converting Shoes - 10 Day Window</h5>
+                                <div class="btn-group btn-group-sm" role="group">
+                                    <button type="button" class="btn btn-outline-secondary active">Grid</button>
+                                    <button type="button" class="btn btn-outline-secondary">List</button>
+                                </div>
+                            </div>
+                            <div class="row" id="grid">
+                                <!-- Products will be loaded here -->
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-lg-4">
+                        <div class="recent-activity">
+                            <h5 class="mb-3"><i class="fas fa-clock mr-2"></i>Recent Activity</h5>
+                            <div class="activity-item">
+                                <div class="d-flex justify-content-between">
+                                    <span class="small">New product added</span>
+                                    <span class="small text-muted">2 min ago</span>
+                                </div>
+                                <div class="small text-muted">Athletic Sneakers #AS001</div>
+                            </div>
+                            <div class="activity-item">
+                                <div class="d-flex justify-content-between">
+                                    <span class="small">Inventory updated</span>
+                                    <span class="small text-muted">15 min ago</span>
+                                </div>
+                                <div class="small text-muted">Heel Boots #HB205 - Low stock alert</div>
+                            </div>
+                            <div class="activity-item">
+                                <div class="d-flex justify-content-between">
+                                    <span class="small">Feed refreshed</span>
+                                    <span class="small text-muted">1 hour ago</span>
+                                </div>
+                                <div class="small text-muted">JustFab Top Converters updated</div>
+                            </div>
+                            <div class="activity-item">
+                                <div class="d-flex justify-content-between">
+                                    <span class="small">Price adjustment</span>
+                                    <span class="small text-muted">2 hours ago</span>
+                                </div>
+                                <div class="small text-muted">Summer Collection - 15% discount applied</div>
+                            </div>
+                            <div class="activity-item">
+                                <div class="d-flex justify-content-between">
+                                    <span class="small">New arrivals processed</span>
+                                    <span class="small text-muted">3 hours ago</span>
+                                </div>
+                                <div class="small text-muted">24 new products added to catalog</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts and Data -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.1/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/script.min.js"></script>
+
+    <script>
+
+        // Feed configuration
+        const feedPrefix = "https://jf-na-cdn.justfab.com/image/site/en_US/dm/acquisition/feed/justfab/topconvert/";
+        const sdfeedPrefix = "https://us-cdn.sd-assets.com/media/images/dm/feed/shoedazzle/topconvert/";
+        const filetype = ".tsv" + "?v=" + Math.random();
+        
+        const feedLinks = {
+            // Justfab US
+            Feed1: "JustFab Top Converters Shoes 10 Day Report",
+            Feed2: "JustFab Top Converters Shoes 1 Day Report",
+            Feed3: "JustFab Top Converters Clothing Report",
+            Feed4: "Justfab Top Converters Accessories Report",
+            Feed5: "Justfab New Arrivals Shoes Report",
+            Feed6: "Justfab Top Inventory Shoes Report",
+            Feed7: "Justfab Low Inventory Shoes Report",
+            Feed8: "",
+            // Justfab CA
+            Feed9: "Justfab CA Top Converters Shoes Report",
+            Feed10: "",
+            Feed11: "",
+            // Shoedazzle
+            Feed10: "Shoedazzle Top Converters Shoes 10 Day Report",
+            Feed11: "Shoedazzle Top Converters Shoes 1 Day Report",
+            Feed12: "Shoedazzle Top Converters Clothing Report",
+            Feed13: "Shoedazzle Top Converters Accessories Report",
+            Feed14: "Shoedazzle New Arrivals Shoes Report",
+            Feed15: "Shoedazzle Top Inventory Shoes",
+            Feed16: "Shoedazzle Low Inventory Shoes",
+            Feed17: "Shoedazzle Bestsellers Report",
+            //Fabkids
+            Feed18: "Fabkids Top Converters",
+            Feed19: "", Feed21: "", Feed22: "", Feed23: "", Feed24: "",
+            //Fabletics
+            Feed25: "Fabletics Top Convertering Leggings Report 10 Day",
+            Feed26: "Fabletics Top Convertering Leggings Report 1 Day",
+            Feed27:"Fabletics New Arrivals Leggings Report",
+            Feed28: "Fabletics Top Inventory Leggings Report",
+            Feed29: "Fabletics Mens Top Convertering Report 10 Day", 
+            Feed30: "Fabletics Yitty Top Convertering Report 10 Day", 
+            Feed31: "Fabletics Yitty New Arrivals Report", 
+            Feed32: "Fabletics Mens New Arrivals Report", 
+            //Justfab EU
+            Feed35: "JustFab DE Top Converters Shoes",
+            Feed36: "JustFab DK Top Converters Shoes",
+            Feed37: "JustFab ES Top Converters Shoes",
+            Feed38: "JustFab FR Top Converters Shoes",
+            Feed39: "JustFab SE Top Converters Shoes",
+            Feed40: "JustFab UK Top Converters Shoes",
+            //Fabletics EU
+            Feed41: "Fabletics DE Top Converters Leggings",
+            Feed42: "Fabletics DK Top Converters Leggings",
+            Feed43: "Fabletics ES Top Converters Leggings",   
+            Feed44: "Fabletics FR Top Converters Leggings",   
+            Feed45: "Fabletics SE Top Converters Leggings",   
+            Feed46: "Fabletics UK Top Converters Leggings",   
+            Feed47: "Fabletics UK New Arrivals"
+        };
+
+        // Dashboard functions
+        var totalProducts = 3;
+
+        function updateDashboard(brand) {
+            console.log('Updating dashboard for:', brand);
+            // Update dashboard stats based on selected brand
+            // This function can be expanded to change the display based on brand selection
+        }
+
+        function setProducts() {
+            console.log("Setting up products grid");
+            var gridwrap = document.getElementById("grid");
+            var ginputs = '';
+
+            // Demo product data
+            var demoProducts = [
+                {
+                    name: "Classic Sneakers",
+                    image: "https://via.placeholder.com/400x200?text=Sneakers",
+                    price: "$89.99",
+                    saleprice: "$69.99",
+                    inventory: 120,
+                    sku: "SNK001",
+                    mpid: "MP1001",
+                    date: "2025-11-01",
+                    salescountone: 20,
+                    salescountten: 120
+                },
+                {
+                    name: "Elegant Heels",
+                    image: "https://via.placeholder.com/400x200?text=Heels",
+                    price: "$129.99",
+                    saleprice: "$99.99",
+                    inventory: 45,
+                    sku: "HEL002",
+                    mpid: "MP1002",
+                    date: "2025-10-28",
+                    salescountone: 8,
+                    salescountten: 60
+                },
+                {
+                    name: "Sporty Trainers",
+                    image: "https://via.placeholder.com/400x200?text=Trainers",
+                    price: "$79.99",
+                    saleprice: "$59.99",
+                    inventory: 200,
+                    sku: "TRN003",
+                    mpid: "MP1003",
+                    date: "2025-10-30",
+                    salescountone: 30,
+                    salescountten: 180
+                },
+                {
+                    name: "Casual Loafers",
+                    image: "https://via.placeholder.com/400x200?text=Loafers",
+                    price: "$99.99",
+                    saleprice: "$79.99",
+                    inventory: 80,
+                    sku: "LOF004",
+                    mpid: "MP1004",
+                    date: "2025-10-25",
+                    salescountone: 12,
+                    salescountten: 70
+                }
+            ];
+
+            for (var i = 0; i < demoProducts.length; i++) {
+                var p = demoProducts[i];
+                ginputs += `
+                    <div class="col-xl-4 col-lg-6 col-md-6 mb-4">
+                        <div class="card h-100 shadow-sm">
+                            <a target="_blank" id="link${i}" href="#link#">
+                                <img id="image${i}" src="${p.image}" alt="${p.name}" class="card-img-top" style="height: 200px; object-fit: cover;">
+                            </a>
+                            <div class="card-body">
+                                <h6 id="name${i}" class="card-title text-dark">${p.name}</h6>
+                                <div class="mb-2">
+                                    <span style="text-decoration: line-through red;" id="price${i}" class="text-muted">${p.price}</span>
+                                    <span id="saleprice${i}" class="text-success font-weight-bold ml-2">${p.saleprice}</span>
+                                </div>
+                                <div class="row text-sm mb-2">
+                                    <div class="col-6">
+                                        <small class="text-muted">Inventory:</small>
+                                        <span id="inventory${i}" class="badge badge-warning">${p.inventory}</span>
+                                    </div>
+                                    <div class="col-6">
+                                        <small class="text-muted">SKU:</small>
+                                        <span id="parentsku${i}" class="small text-muted">${p.sku}</span>
+                                    </div>
+                                </div>
+                                <div class="row text-sm mb-2">
+                                    <div class="col-6">
+                                        <small class="text-muted">MPID:</small>
+                                        <span id="mpid${i}" class="small text-muted">${p.mpid}</span>
+                                    </div>
+                                    <div class="col-6">
+                                        <small class="text-muted">Release:</small>
+                                        <span id="date${i}" class="small text-muted">${p.date}</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-footer bg-light">
+                                <div class="d-flex justify-content-between mb-2">
+                                    <small class="text-muted">AO 1 Day</small>
+                                    <span id="salescountone${i}" class="badge badge-primary">${p.salescountone}</span>
+                                </div>
+                                <div class="d-flex justify-content-between">
+                                    <small class="text-muted">AO 10 Day</small>
+                                    <span id="salescountten${i}" class="badge badge-info">${p.salescountten}</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>`;
+            }
+            gridwrap.innerHTML = ginputs;
+        }
+
+        // Initialize dashboard
+        // Show products immediately when DOM is ready
+        $(document).ready(function() {
+            setProducts();
+        });
+
+        // Update page title when feed changes
+    function updateFeedTitle(feedName) {
+            document.getElementById('current-feed-title').textContent = feedName;
+        }
+    </script>
+</body>
+
+</html>
