@@ -668,10 +668,7 @@ export default function App() {
               margin: "0 auto",
             }}
           >
-            Thank you again for your time. I left our
-            conversation energized by the opportunity to
-            contribute to Luxury Presence and help shape how
-            great products are designed and built.
+            Thank you again for your time. I left our conversation energized by the opportunity to contribute to Luxury Presence, helping shape how great products are designed and built while supporting one of the largest communities of independent business owners in the country.
           </motion.p>
 
           <motion.p
