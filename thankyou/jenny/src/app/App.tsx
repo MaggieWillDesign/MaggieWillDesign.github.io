@@ -31,7 +31,7 @@ const fadeUp = {
 export default function App() {
   const [heroVisible, setHeroVisible] = useState(false);
   const [activeSection, setActiveSection] = useState("");
-  const [isDark, setIsDark] = useState(true);
+  const [isDark, setIsDark] = useState(false);
   const [mouse, setMouse] = useState({ x: -1000, y: -1000 });
   const [heroInView, setHeroInView] = useState(true);
   const heroRef = useRef<HTMLElement>(null);
@@ -62,8 +62,8 @@ export default function App() {
   }, []);
 
   useLayoutEffect(() => {
-    document.documentElement.classList.add("dark");
-    document.documentElement.style.colorScheme = "dark";
+    document.documentElement.classList.remove("dark");
+    document.documentElement.style.colorScheme = "light";
   }, []);
 
   useEffect(() => {
@@ -302,7 +302,7 @@ export default function App() {
             className="text-xs tracking-[0.25em] uppercase mb-6"
             style={{ color: fg(0.65), letterSpacing: "0.25em" }}
           >
-            maggie williams / design engineer
+            maggie willliams / design engineer
           </motion.p>
 
           <motion.h1
@@ -700,7 +700,7 @@ export default function App() {
           className="text-xs tracking-widest uppercase"
           style={{ color: fg(0.6) }}
         >
-          Maggie Williams
+          Maggie Will Design
         </span>
         <span className="text-xs" style={{ color: fg(0.55) }}>
           Design Engineer Candidate — Luxury Presence
