@@ -302,7 +302,7 @@ export default function App() {
             className="text-xs tracking-[0.25em] uppercase mb-6"
             style={{ color: fg(0.65), letterSpacing: "0.25em" }}
           >
-            maggie willliams / design engineer
+            maggie williams / design engineer
           </motion.p>
 
           <motion.h1
