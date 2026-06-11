@@ -302,7 +302,7 @@ export default function App() {
             className="text-xs tracking-[0.25em] uppercase mb-6"
             style={{ color: fg(0.65), letterSpacing: "0.25em" }}
           >
-            maggie will design / reflections
+            maggie williams / design engineer
           </motion.p>
 
           <motion.h1
@@ -700,7 +700,7 @@ export default function App() {
           className="text-xs tracking-widest uppercase"
           style={{ color: fg(0.6) }}
         >
-          Maggie Will Design
+          Maggie Williams
         </span>
         <span className="text-xs" style={{ color: fg(0.55) }}>
           Design Engineer Candidate — Luxury Presence
