@@ -700,7 +700,7 @@ export default function App() {
           className="text-xs tracking-widest uppercase"
           style={{ color: fg(0.6) }}
         >
-          Maggie Will Design
+          Maggie Williams
         </span>
         <span className="text-xs" style={{ color: fg(0.55) }}>
           Design Engineer Candidate — Luxury Presence
