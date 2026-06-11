@@ -545,10 +545,7 @@ export default function App() {
                   fontStyle: "italic",
                 }}
               >
-                "One thing I enjoy most is understanding the
-                full lifecycle of a feature — from user research
-                and product strategy through implementation and
-                customer impact."
+                "What excites me most is having visibility into the full lifecycle of a feature — from user research and product strategy through implementation and customer impact."
               </p>
               <div className="mt-8 flex items-center gap-3">
                 <div
